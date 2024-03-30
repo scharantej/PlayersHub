@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hockey Player List</title>
+</head>
+<body>
+<h1>Hockey Player List</h1>
+<nav>
+<a href="/">Home</a>
+</nav>
+<div>
+<input type="text" placeholder="Search by player name">
+<select>
+<option value="goals">Goals</option>
+<option value="assists">Assists</option>
+</select>
+</div>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Goals</th>
+<th>Assists</th>
+</tr>
+</thead>
+<tbody>
+{% for player in players %}
+<tr>
+<td>{{ player.name }}</td>
+<td>{{ player.goals }}</td>
+<td>{{ player.assists }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
